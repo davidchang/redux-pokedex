@@ -3,22 +3,28 @@ import React, { Component, PropTypes } from 'react';
 export default class PokemonItem extends Component {
   static propTypes = {
     pokemon: PropTypes.object.isRequired,
+    caught: PropTypes.bool.isRequired,
     actions: PropTypes.object.isRequired
   };
 
   render() {
-    const {pokemon, actions} = this.props;
+    const {pokemon, caught, actions} = this.props;
 
     return (
-      <tr>
+      <tr className={caught ? 'success' : ''}>
         <td>{pokemon.name}</td>
         <td>{pokemon.type}</td>
         <td>{pokemon.stage}</td>
         <td>{pokemon.species}</td>
         <td>
-          {pokemon.caught ?
+          {caught ?
             'Caught!' :
-            <button onClick={() => actions.markCaught(pokemon.name)}>Catch</button>
+            <button
+              type="button"
+              onClick={() => actions.markCaught(pokemon.name)}
+              className="btn btn-primary">
+              Catch
+            </button>
           }
         </td>
       </tr>

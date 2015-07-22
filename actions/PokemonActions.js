@@ -7,15 +7,6 @@ export function searchTermChanged(searchTerm) {
   };
 }
 
-export function toggleFilter(filterType, filterLabel) {
-  console.log('arguments', arguments);
-  return {
-    type: types.TOGGLE_FILTER,
-    filterType,
-    filterLabel
-  };
-}
-
 export function markCaught(name) {
   return {
     type: types.MARK_CAUGHT,
