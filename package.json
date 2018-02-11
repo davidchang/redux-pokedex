@@ -1,46 +1,16 @@
 {
-  "name": "todomvc",
-  "version": "0.0.0",
-  "description": "TodoMVC example for redux",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gaearon/redux.git"
-  },
-  "keywords": [
-    "react",
-    "reactjs",
-    "hot",
-    "reload",
-    "hmr",
-    "live",
-    "edit",
-    "webpack",
-    "flux"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/gaearon/redux/issues"
-  },
-  "homepage": "https://github.com/gaearon/redux#readme",
+  "name": "redux-pokedex",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "classnames": "^2.1.2",
-    "react": "^0.13.3",
-    "react-redux": "^0.2.2",
-    "redux": "^1.0.0-rc"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1"
   },
-  "devDependencies": {
-    "babel-core": "^5.5.8",
-    "babel-loader": "^5.1.4",
-    "node-libs-browser": "^0.5.2",
-    "raw-loader": "^0.5.1",
-    "react-hot-loader": "^1.2.7",
-    "redux-devtools": "^0.1.2",
-    "style-loader": "^0.12.3",
-    "webpack": "^1.9.11",
-    "webpack-dev-server": "^1.9.0"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
