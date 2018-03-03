@@ -9,7 +9,7 @@ function App({
 }) {
   return (
     <section>
-      <h1>Pokedex in React state</h1>
+      <h1>Pokedex in React context</h1>
 
       <form>
         <div>

@@ -1,5 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import WrappedApp from './WrappedApp';
+import DataProvider from './DataProvider';
+import DataConsumer from './DataConsumer';
+import App from './App';
 
-ReactDOM.render(<WrappedApp />, document.getElementById('root'));
+ReactDOM.render(
+  <DataProvider>
+    <DataConsumer>
+      <App />
+    </DataConsumer>
+  </DataProvider>,
+  document.getElementById('root'),
+);
