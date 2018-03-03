@@ -1,6 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import actions from './actions';
 
 function App({
   caughtPokemon,
@@ -11,7 +9,7 @@ function App({
 }) {
   return (
     <section>
-      <h1>Pokedex in Redux</h1>
+      <h1>Pokedex in React state</h1>
 
       <form>
         <div>
@@ -63,4 +61,4 @@ function App({
   );
 }
 
-export default connect(store => store, actions)(App);
+export default App;
