@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import Pokemon from './pokemon';
-import App from './App.js';
-import createReactContext from 'create-react-context';
 
 const DEFAULT_STATE = {
   caughtPokemon: [],
@@ -9,7 +7,9 @@ const DEFAULT_STATE = {
   searchTerm: '',
 };
 
-export const ThemeContext = createReactContext(DEFAULT_STATE);
+const { Provider, Consumer } = createContext(DEFAULT_STATE);
+
+export const DataConsumer = Consumer;
 
 export default class DataProvider extends React.Component {
   state = DEFAULT_STATE;
@@ -26,7 +26,7 @@ export default class DataProvider extends React.Component {
 
   render() {
     return (
-      <ThemeContext.Provider
+      <Provider
         value={{
           ...this.state,
           searchTermChanged: this.searchTermChanged,
@@ -34,7 +34,7 @@ export default class DataProvider extends React.Component {
         }}
       >
         {this.props.children}
-      </ThemeContext.Provider>
+      </Provider>
     );
   }
 }

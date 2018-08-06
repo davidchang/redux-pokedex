@@ -1,12 +1,12 @@
 import React from 'react';
-import { ThemeContext } from './DataProvider';
+import { DataConsumer as ContextConsumer } from './DataProvider';
 
 export default class DataConsumer extends React.Component {
   render() {
     const { children } = this.props;
 
     return (
-      <ThemeContext.Consumer>
+      <ContextConsumer>
         {({
           caughtPokemon,
           allPokemon,
@@ -32,7 +32,7 @@ export default class DataConsumer extends React.Component {
             }),
           );
         }}
-      </ThemeContext.Consumer>
+      </ContextConsumer>
     );
   }
 }
